@@ -2,8 +2,8 @@
     <div class="container_log">
         <img src="logo.png" alt="Logo centrado">
     </div>
-
-    <div class="mini_header">
+    <script src="Script.js"></script>
+    <div class="mini_header"   >
         <nav>
             <ul>
                 <li><a href="index.php">Inicio</a></li>
