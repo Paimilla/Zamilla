@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f400;
+  color: #333;
+  
+}
+
+header {
+  background-color: #333;
+  color: #968a8a00;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.container_log {
+  text-align: center;
+  margin-bottom: 1em;
+  
+}
+
+.container_log img {
+  max-width: 150px;
+  height: auto;
+}
+
+
+.mini_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #444;
+  border-radius: 10px;
+  height: 50px;
+  transition: all 0.3s ease; 
+}
+
+
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+header nav ul li {
+  position: relative;
+  margin: 0 1em;
+}
+
+header nav ul li a {
+  color: #fff; /* Asegúrate de que sea blanco */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+
+
+header nav ul li a:hover {
+  color: #ddd;
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #555 !important;
+  padding: 10px 0;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  opacity: 0;
+  transform: translateY(10px); 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  background-color: #777;
+  
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  color: #fff !important; 
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #282424 !important; 
+  border-radius: 5px;
+}
+
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  outline: 0;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff00;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background-color: #777;
+}
+
+.icon {
+  font-size: 20px;
+  color: #fff;
+}
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-item img {
+    filter: brightness(85%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #fff;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 10px;
+  border: 3px solid #333; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}

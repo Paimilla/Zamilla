@@ -1,3 +1,10 @@
+<%-- 
+    Document   : Index
+    Created on : 13-11-2024, 6:03:08 p.m.
+    Author     : fpaim
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -13,9 +20,10 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
-    <main>
+    <!-- Incluir el encabezado -->
+    <jsp:include page="header.jsp" />
 
+    <main>
         <div class="container-fluid p-0">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -25,21 +33,21 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="banner1.jpg" class="d-block w-100" alt="Banner">
+                        <img src="img/banner1.jpg" class="d-block w-100" alt="Banner">
                         <div class="carousel-caption">
                             <h5>Bienvenido a Nuestro Sitio</h5>
                             <p>Explora y disfruta de nuestros servicios.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="banner2.jpg" class="d-block w-100" alt="Carrusel 2">
+                        <img src="img/banner2.jpg" class="d-block w-100" alt="Carrusel 2">
                         <div class="carousel-caption">
                             <h5>Calidad y Confianza</h5>
                             <p>Nos dedicamos a ofrecer lo mejor para ti.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="banner3.jpg" class="d-block w-100" alt="Carrusel 3">
+                        <img src="img/banner3.jpg" class="d-block w-100" alt="Carrusel 3">
                         <div class="carousel-caption">
                             <h5>Únete a Nuestra Comunidad</h5>
                             <p>Somos más fuertes juntos.</p>
@@ -58,8 +66,8 @@
         </div>
     </main>
 
-    <?php include 'footer.php'; ?>
-    <script src="Script.js" defer></script>
+    <script src="${pageContext.request.contextPath}/js/Script.js" defer></script>
+    <jsp:include page="footer.jsp" />
 </body>
 
 </html>

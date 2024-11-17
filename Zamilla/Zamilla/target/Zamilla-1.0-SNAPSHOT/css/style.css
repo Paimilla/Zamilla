@@ -28,6 +28,7 @@ footer {
 .container_log {
   text-align: center;
   margin-bottom: 1em;
+  
 }
 
 .container_log img {
@@ -46,6 +47,7 @@ footer {
   height: 50px;
   transition: all 0.3s ease; 
 }
+
 
 
 .fixed {
@@ -71,13 +73,14 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #fff; /* Asegúrate de que sea blanco */
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   display: block;
   transition: color 0.3s ease;
 }
+
 
 
 header nav ul li a:hover {
@@ -91,7 +94,7 @@ header nav ul li a:hover {
 }
 
 .dropdown-menu {
-  display: none;
+  display: flex;
   position: absolute;
   top: 100%;
   left: 0;

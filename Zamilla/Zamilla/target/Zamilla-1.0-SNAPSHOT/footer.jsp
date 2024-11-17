@@ -1,3 +1,11 @@
+<%-- 
+    Document   : footer
+    Created on : 13-11-2024, 6:40:35 p. m.
+    Author     : fpaim
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <footer>
     
     <p>&copy; 2024 ZaMila.</p >
